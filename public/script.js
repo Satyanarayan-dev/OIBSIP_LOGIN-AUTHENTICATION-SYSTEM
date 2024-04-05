@@ -40,10 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem("userData");
   };
 
-  // Add event listener for registration form submission
   if (registerForm) {
     registerForm.addEventListener("submit", async (e) => {
-      e.preventDefault(); // Prevent form submission
+      e.preventDefault(); 
       const username = document.getElementById("regUsername").value;
       const password = document.getElementById("regPassword").value;
       const response = await fetch("/register", {
@@ -70,8 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("regPassword").value = "";
     });
   }
-
-  // Add event listener for login form submission
+  
   if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
       e.preventDefault(); // Prevent form submission
@@ -86,20 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       if (response.ok) {
         showToast("Login successful", true);
-        // Save user data in localStorage
         saveUserData(username, password);
-        // Redirect to dashboard page
         window.location.href = "/dashboard";
       } else {
         showToast("Login failed. Invalid credentials", false);
       }
-      // Clear input fields after displaying toast
       document.getElementById("username").value = "";
       document.getElementById("password").value = "";
     });
   }
-
-  // Add event listener for logout button
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
@@ -128,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const userData = getUserData();
     if (userData) {
       usernameSpan.textContent = userData.username;
-      usernameSpan.style.display = "inline"; // Show username in navbar
-      logoutBtn.style.display = "inline"; // Show logout button in navbar
+      usernameSpan.style.display = "inline"; 
+      logoutBtn.style.display = "inline"; 
     }
   }
 });
