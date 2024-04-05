@@ -22,15 +22,23 @@
       <form id="registerForm">
         <div class="input-group">
           <i class="fas fa-user"></i>
-          <input type="text" id="regUsername" placeholder="Username" required />
+           <input
+            type="text"
+            id="regUsername"
+            placeholder="Username"
+            required
+            minlength="4"
+          />
         </div>
         <div class="input-group">
           <i class="fas fa-lock"></i>
-          <input
+           <input
             type="password"
             id="regPassword"
             placeholder="Password"
             required
+            minlength="8"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
           />
         </div>
         <button type="submit">Register</button>
