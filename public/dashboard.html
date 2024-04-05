@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation Links -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Dashboard</a></li>
+        </ul>
+      </nav>
+      <!-- User Profile Information -->
+      <div class="user-profile">
+        <span>Welcome, </span>
+        <span id="username"></span>
+        <a href="#" id="logoutBtn"
+          >Logout <i class="fas fa-sign-out-alt"></i
+        ></a>
+        <!-- Logout icon -->
+      </div>
+    </header>
+
+    <div class="container">
+      <h2>Welcome to the Dashboard</h2>
+      <!-- Add dashboard content here -->
+      <p style="font-size: 20px">
+        This is your dashboard which shows you have successfully logged.in
+      </p>
+    </div>
+
+    <!-- Spinner Element -->
+    <div id="logoutSpinner" class="spinner"></div>
+
+    <!-- Logout Message -->
+    <div id="logoutMessage" style="display: none">Logging out...</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
