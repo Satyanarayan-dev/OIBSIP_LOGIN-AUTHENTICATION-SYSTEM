@@ -49,7 +49,7 @@ app.get("/dashboard", (req, res) => {
 
 // Logout route
 app.get("/logout", (req, res) => {
-  // Here you can perform any cleanup tasks, such as clearing sessions or cookies
+  // redirect to login page
   res.redirect("/login");
 });
 
