@@ -68,8 +68,8 @@ a:hover {
 
 /* Toast Notification */
 .toast-container {
-  position: absolute; /* Change position to absolute */
-  top: 0; /* Position it at the top */
+  position: absolute; 
+  top: 0; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -154,7 +154,7 @@ nav ul li a:hover {
   animation: spin 1s linear infinite;
   margin: 0 auto;
   margin-top: 20px;
-  display: none; /* Hide spinner by default */
+  display: none; 
 }
 
 @keyframes spin {
