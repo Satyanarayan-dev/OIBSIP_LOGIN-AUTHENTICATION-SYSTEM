@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "..", "public"))); // Serving static files from 'public' folder
+app.use(express.static(path.join(__dirname, "..", "public"))); 
 
-// In-memory database for user credentials
+
 const users = new Map();
 
 // Routes
